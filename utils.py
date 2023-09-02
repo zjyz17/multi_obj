@@ -304,7 +304,7 @@ def download_with_retries(artifact: Artifact, n_retries: int = 5):
 def download_runs_wandb(
     api: wandb.Api,
     wandb_entity: str = "ceb-sre",
-    wandb_project: str = "distill",
+    wandb_project: str = "bo_mixed",
     include_tags: Optional[List[str]] = None,
     filter_tags: Optional[List[str]] = None,
     only_finished_runs: bool = True,
@@ -410,6 +410,9 @@ def get_wandb_run_dfs(
     return dfs
 
 
+
+
+
 def calculate_hypervolume(data, domain: Domain):
     hypervolumes = []
     output_names = [v.name for v in domain.output_variables]
@@ -431,4 +434,6 @@ def calculate_hypervolume(data, domain: Domain):
         # Calculate hypervolume
         hv = hypervolume(pareto, reference_point)
         hypervolumes.append(hv)
+
     return hypervolumes
+
