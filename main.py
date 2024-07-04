@@ -52,14 +52,14 @@ def main(
     for i in range(1,21):
 
         if intialization_data_path is not None:
-            # df = pd.read_excel(intialization_data_path + f"initial_design_{i}.xlsx",
-            #                    header=None, usecols="A:D", skiprows=[0], nrows=20,
-            #                    names=["equiv", "flowrate", "elec", "solv"])
-
-            # paper revision - compare initial design
-            df = pd.read_excel(intialization_data_path + f"InitialDesign_28_re4_{i}.xlsx",
-                               header=None, usecols="A:D", skiprows=[0], nrows=28,
+            df = pd.read_excel(intialization_data_path + f"initial_design_{i}.xlsx",
+                               header=None, usecols="A:D", skiprows=[0], nrows=20,
                                names=["equiv", "flowrate", "elec", "solv"])
+
+            # # paper revision - compare initial design
+            # df = pd.read_excel(intialization_data_path + f"InitialDesign_28_re4_{i}.xlsx",
+            #                    header=None, usecols="A:D", skiprows=[0], nrows=28,
+            #                    names=["equiv", "flowrate", "elec", "solv"])
 
             ds = DataSet.from_df(df)
             prev_res = exp.run_experiments(ds)

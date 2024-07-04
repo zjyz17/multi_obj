@@ -43,9 +43,9 @@ class CategoricalqNEHVI(qNEHVI):
 
     def forward(self, X): # this is do the rounding for categ vars in acquisition function!!
         if not self.skip:
-            print("before round X=", X) # test before rounding
+            # print("before round X=", X) # test before rounding
             X = self.round_categorical(X, self._domain, self.descriptor_tensors)
-            print("after round X=", X) # test after rounding
+            # print("after round X=", X) # test after rounding
         return super().forward(X)
 
     @staticmethod

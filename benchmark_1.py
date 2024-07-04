@@ -200,6 +200,5 @@ def test_benchmark():
     results = exp.run_experiments(conditions, plot=True)
     print(results)
 
-
 if __name__ == "__main__":
     test_benchmark()
