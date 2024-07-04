@@ -77,7 +77,6 @@ class MixedBenchmark(Experiment):
         conditions["sty", "DATA"] = sty
         conditions["e_factor", "DATA"] = e_factor
         return conditions, {}
-
     @staticmethod
     def get_parameters(equiv, flowrate, elec, solv):
         v = 2e-3 * flowrate / 60
