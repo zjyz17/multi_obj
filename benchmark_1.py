@@ -62,6 +62,7 @@ class MixedBenchmark(Experiment):
 
         return domain
 
+
     def _run(self, conditions: DataSet, plot: bool = False, **kwargs) -> DataSet:
         equiv = float(conditions["equiv"])
         flowrate = float(conditions["flowrate"])
