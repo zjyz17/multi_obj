@@ -62,7 +62,6 @@ class MixedBenchmark(Experiment):
 
         return domain
 
-
     def _run(self, conditions: DataSet, plot: bool = False, **kwargs) -> DataSet:
         equiv = float(conditions["equiv"])
         flowrate = float(conditions["flowrate"])
@@ -77,6 +76,7 @@ class MixedBenchmark(Experiment):
         conditions["sty", "DATA"] = sty
         conditions["e_factor", "DATA"] = e_factor
         return conditions, {}
+
     @staticmethod
     def get_parameters(equiv, flowrate, elec, solv):
         v = 2e-3 * flowrate / 60
